@@ -1,0 +1,14 @@
+name: jobansworkflow
+on:
+  workflow_dispatch:
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print multi line output
+        run: |
+          echo "line 1"
+          echo "line 2"
+  
+  
+  
