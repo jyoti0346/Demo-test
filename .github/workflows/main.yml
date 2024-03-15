@@ -1,14 +1,19 @@
-name: jobansworkflow
+name: aneesh
+
 on:
-  workflow_dispatch:
+  push:
 jobs:
-  myjob:
-    runs-on: ubuntu-latest
+  python_job:
+    runs-on: ubantu-latest
     steps:
-      - name: print multi line output
-        run: |
-          echo "line 1"
-          echo "line 2"
-  
-  
-  
+        -name: checkout-name
+        uses: actions/checkout@v2
+        -name: python-setup
+        uses: actions/python-setup@v2
+        with: 
+            python-version: '3.x'
+        -name: run python code
+        run: python3 -c "print('hello code')"
+        
+    
+      
